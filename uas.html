@@ -1,0 +1,66 @@
+<title>tugas</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<body>
+<h4>Ridho Fitra Palasa - 2110059</h4>
+<h3>Pemesanan Tiket Maskapai</h3>
+
+<form action="">
+<p id="namaa">
+    Nama : <input type="text" id="nama">
+</p>
+<p id="jlm">
+    Jumlah Tiket : <input type="text" id="jumlah">
+</p>
+<p id="kls"> 
+    Kelas : <select id="kelas">
+             <option value="ekonomi">EKONOMI</option>
+             <option value="bisnis">BISNIS</option>
+             <option value="eksekutif">EKSEKUTIF</option>
+</select>
+</p>
+ <p id="tjn">
+             <label>Tujuan :</label>
+             <select id="tujuan">
+                 <option value="bali">Bali</option>
+                 <option value="jakarta">Jakarta</option>
+                
+             </select>
+</p> 
+<p id="bgs">
+                <label>Bagasi :
+                         <label><input type="radio" id="bagasi" value="5kg"/>5kg</label>
+                         <label><input type="radio" id="bagasi" value="10kg" />10kg</label>
+                         <label><input type="radio" id="bagasi" value="15kg" />15kg</label>
+                     </label>
+</p>
+ <p id="asr">
+            Asuransi:
+                <input type="checkbox" id="asuransi1" value="jiwa"> Asuransi Jiwa
+                <input type="checkbox" id="asuransi2" value="celaka" > Asuransi Kecelakaan
+                <input type="checkbox" id="asuransi3" value="lambat"> Asuransi Keterlambatan
+
+</p>
+<button onclick="displayName()">Simpan</button>
+
+</body>
+<script>
+   function displayName(){
+       var name = document.getElementById("nama").value;
+       document.getElementById("namaa").innerHTML = "Nama :" + name;
+
+       var jumlah = document.getElementById("jumlah").value;
+       document.getElementById("jlm").innerHTML = "Jumlah Pesanan :" + jumlah;
+
+       var kelas = document.getElementById("kelas").value;
+       document.getElementById("kls").innerHTML = "Kelas :" + kelas;
+
+       var tujuan = document.getElementById("tujuan").value;
+       document.getElementById("tjn").innerHTML = "Tujuan :" + tujuan;
+
+       var bagasi = document.getElementById("bagasi").value;
+       document.getElementById("bgs").innerHTML = "Bagasi :" + bagasi;
+
+       var ransi = document.getElementById("asuransi1").value;
+       document.getElementById("asr").innerHTML = "Asuransi :" + ransi;
+    }
+</script>
